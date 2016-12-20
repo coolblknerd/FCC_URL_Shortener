@@ -37,3 +37,9 @@ Now, I need to create a way to shorten the url.  Probably gonna need a database
 for this one though.  But I've figured out how to check the incoming url 
 parameter against a regEx which will help check to see if the incoming is a
 valid URL.
+
+So the way I see this working out in my head is when the param is checked and 
+the url is validated the program will take the param and check inside a database
+to see if there is already a link like it already in there with shortened url.
+If so, then return the original url and the shortened url, otherwise, the 
+program will store the new, validated url and create a shortened url for it.
