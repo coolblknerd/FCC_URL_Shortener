@@ -24,3 +24,16 @@ backslashes in the parameter.  I've tried the 'query string', 'body-parser', and
 'url' modules to no avail.  The encodeURIComponent seems the most likely method
 to use to escape the backslashes but the method isn't working with node/express.
 I'm just gonna keep playing around with it until something comes up.
+
+12-19-16
+
+Took a couple of days off to start learning a bit about RxJS but after seeking 
+out for some help on the Free Code Camp I think I've found a way to capture the
+parameter.  Looks like the juice was hidden in 'req.url' or 'req.originalUrl'.  
+Granted, it leaves a backslash in the beginning but that's nothing that some
+small core method can't take care of.
+
+Now, I need to create a way to shorten the url.  Probably gonna need a database
+for this one though.  But I've figured out how to check the incoming url 
+parameter against a regEx which will help check to see if the incoming is a
+valid URL.
