@@ -10,9 +10,9 @@ app.get('/', function(req, res){
     res.render('index.html');
 });
 
-app.get('/:link', function(req, res){
-   var url = req.params.link.toString()
-   , encode = encodeURIComponent(url);
+app.get('/:link*', function(req, res){
+    var url = req.params.link,
+    encode = encodeURIComponent(url);
    
    console.log(encode);
    
